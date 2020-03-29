@@ -5,4 +5,4 @@ This project is under [WTFPL or 'What The Fuck Public License'](https://es.wikip
 
 ## Issues
 
-Please, report issues or suggestions [here](https://github.com/allnulled/mysql-schema-generator/issues/new).
+Please, report issues or suggestions [here](https://github.com/allnulled/mysql-generator-for-express/issues).

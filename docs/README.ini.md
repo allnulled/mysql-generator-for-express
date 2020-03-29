@@ -1,6 +1,6 @@
-# mysql-schema-generator
+# mysql-generator-for-express
 
-Generate projects from `mysql-schema` files.
+Generate `express` projects from `mysql-schema` files.
 
 
 
