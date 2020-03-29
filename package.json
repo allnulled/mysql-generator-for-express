@@ -1,19 +1,27 @@
 {
   "name": "mysql-generator-for-express",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": " Generate express projects for MySQL databases. ",
+  "bin": {
+    "mysql-generator-for-express": "bin/mysql-generator-for-express"
+  },
+  "main": "src/index.js",
   "scripts": {
     "build": "npm shrinkwrap",
     "docs": "javadoc -i src/*.js -o docs/README.api.md -f markdown && concat docs/README.ini.md docs/README.api.md docs/README.end.md -o README.md",
-    "upload": "npm run build && npm run docs && git add . && git commit && git push",
+    "upload": "npm run build && npm run docs && npm run test && git add . && git commit && git push",
     "dev": "nodemon -w src/*.js -w test/*.test.js -x 'npm run test'",
     "cover": "nyc --reporter=html npm run test",
     "test": "mocha --sort --bail test/**/*.test.js"
   },
-  "keywords": ["express","mysql","generator","project"],
+  "keywords": [
+    "express",
+    "mysql",
+    "generator",
+    "project"
+  ],
   "author": "allnulled",
-  "license": "ISC",
+  "license": "WTFPL",
   "devDependencies": {
     "chai": "^4.2.0",
     "concat": "^1.0.3",
@@ -23,5 +31,20 @@
     "nodemon": "^2.0.2",
     "nyc": "^15.0.0",
     "rimraf": "^3.0.2"
-  }
+  },
+  "dependencies": {
+    "mysql-schema-generator": "0.0.2"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allnulled/mysql-generator-for-express.git"
+  },
+  "bugs": {
+    "url": "https://github.com/allnulled/mysql-generator-for-express/issues"
+  },
+  "homepage": "https://github.com/allnulled/mysql-generator-for-express#readme"
 }
